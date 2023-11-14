@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+<!DOCTYPE html >
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" lang="vi">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Boutique</title>
     <meta name="description" content="Shop-Techno">
@@ -26,7 +26,7 @@
     <link rel="shortcut icon" href="img/favicon.png">
   </head>
   <body>
-    <div class="page-holder">
+    <div class="page-holder" ng-app="myApp">
       <!-- navbar-->
       <header class="header bg-white">
         <div class="container px-lg-3">
@@ -35,12 +35,15 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                  <!-- Link--><a class="nav-link active" href="index.html">Home</a>
+                  <!-- Link--><a class="nav-link active" href="index.html">Trang chủ</a>
                 </li>
                 <li class="nav-item">
-                  <!-- Link--><a class="nav-link" href="shop.html">Shop</a>
+                  <!-- Link--><a class="nav-link" href="shop.html">Cửa hàng</a>
                 </li>
                 <li class="nav-item">
+                  <!-- Link--><a class="nav-link" href="shop.html">Liên hệ</a>
+                </li>
+                <li class="nav-item d-none">
                   <!-- Link--><a class="nav-link" href="detail.html">Product detail</a>
                 </li>
                 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="pagesDropdown" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
@@ -48,9 +51,11 @@
                 </li>
               </ul>
               <ul class="navbar-nav ms-auto">               
-                <li class="nav-item"><a class="nav-link" href="cart.html"> <i class="fas fa-dolly-flatbed me-1 text-gray"></i>Cart<small class="text-gray fw-normal">(2)</small></a></li>
-                <li class="nav-item"><a class="nav-link" href="#!"> <i class="far fa-heart me-1"></i><small class="text-gray fw-normal"> (0)</small></a></li>
-                <li class="nav-item"><a class="nav-link" href="#!"> <i class="fas fa-user me-1 text-gray fw-normal"></i>Login</a></li>
+                <!-- <li class="nav-item"><a class="nav-link" href="cart.html"> <i class="fas fa-dolly-flatbed me-1 text-gray"></i>Cart<small class="text-gray fw-normal">(2)</small></a></li> -->
+                <!-- <li class="nav-item"><a class="nav-link" href="#!"> <i class="fas fa-user me-1 text-gray fw-normal"></i>Đăng nhập</a></li> -->
+                <li class="nav-item"><a class="nav-link" href="#offCanvasCart" data-bs-toggle="offcanvas" role="button" aria-controls="offcanvasCart"> <i class="fas fa-dolly-flatbed me-1 text-gray"></i>Giỏ hàng<small class="text-gray fw-normal">(+99)</small></a></li>
+                <li class="nav-item"><a class="nav-link" href="#offCanvasLike" data-bs-toggle="offcanvas" role="button" aria-controls="offcanvasLike"> <i class="far fa-heart me-1"></i><small class="text-gray fw-normal"> (0)</small></a></li>
+                <li class="nav-item"><a class="nav-link" href="#offCanvasLogin" data-bs-toggle="offcanvas" role="button" aria-controls="offcanvasLogin"> <i class="fas fa-user me-1 text-gray fw-normal"></i>Đăng nhập</a></li>
               </ul>
             </div>
           </nav>
@@ -111,7 +116,7 @@
         <section class="pt-5">
           <header class="text-center">
             <p class="small text-muted small text-uppercase mb-1">Carefully created collections</p>
-            <h2 class="h5 text-uppercase mb-4">Browse our categories</h2>
+            <h2 class="h5 text-uppercase mb-4">Các loại sản phẩm của chúng tôi</h2>
           </header>
           <div class="row">
             <div class="col-md-4"><a class="category-item" href="shop.html"><img class="img-fluid" src="img/cat-img-1.jpg" alt=""/><strong class="category-item-title">Clothes</strong></a>
@@ -126,7 +131,7 @@
         <section class="py-5">
           <header>
             <p class="small text-muted small text-uppercase mb-1">Made the hard way</p>
-            <h2 class="h5 text-uppercase mb-4">Top trending products</h2>
+            <h2 class="h5 text-uppercase mb-4">Sản phẩm xu hướng</h2>
           </header>
           <div class="row">
             <!-- PRODUCT-->
@@ -318,14 +323,14 @@
           <div class="container p-0">
             <div class="row gy-3">
               <div class="col-lg-6">
-                <h5 class="text-uppercase">Let's be friends!</h5>
-                <p class="text-sm text-muted mb-0">Nisi nisi tempor consequat laboris nisi.</p>
+                <h5 class="text-uppercase">Hãy trở thành bạn với chúng tôi!</h5>
+                <p class="text-sm text-muted mb-0">Để lại email của bạn để chúng tôi có thể giới thiệu cho bạn thông tin <i>ex: Hot deal,Coupon,...</i> </p>
               </div>
               <div class="col-lg-6">
                 <form action="#">
                   <div class="input-group">
-                    <input class="form-control form-control-lg" type="email" placeholder="Enter your email address" aria-describedby="button-addon2">
-                    <button class="btn btn-dark" id="button-addon2" type="submit">Subscribe</button>
+                    <input class="form-control form-control-lg" type="email" placeholder="Để lại địa chỉ email ex: your-email@gmail.com" aria-describedby="button-addon2">
+                    <button class="btn btn-dark" id="button-addon2" type="submit">Đăng kí</button>
                   </div>
                 </form>
               </div>
@@ -337,46 +342,223 @@
         <div class="container py-4">
           <div class="row py-5">
             <div class="col-md-4 mb-3 mb-md-0">
-              <h6 class="text-uppercase mb-3">Customer services</h6>
+              <h6 class="text-uppercase mb-3">Dịch vụ khách hàng</h6>
               <ul class="list-unstyled mb-0">
-                <li><a class="footer-link" href="#!">Help &amp; Contact Us</a></li>
-                <li><a class="footer-link" href="#!">Returns &amp; Refunds</a></li>
-                <li><a class="footer-link" href="#!">Online Stores</a></li>
-                <li><a class="footer-link" href="#!">Terms &amp; Conditions</a></li>
+                <li><a class="footer-link" href="#!">Giúp đỡ &amp; Liên lạc với chúng tôi</a></li>
+                <li><a class="footer-link" href="#!">Đổi &amp; Trả hàng</a></li>
+                <li><a class="footer-link" href="#!">Cửa hàng trực tuyến</a></li>
+                <li><a class="footer-link" href="#!">Điều khoản &amp; Thỏa thuận</a></li>
               </ul>
             </div>
             <div class="col-md-4 mb-3 mb-md-0">
-              <h6 class="text-uppercase mb-3">Company</h6>
+              <h6 class="text-uppercase mb-3">Về chúng tôi</h6>
               <ul class="list-unstyled mb-0">
-                <li><a class="footer-link" href="#!">What We Do</a></li>
-                <li><a class="footer-link" href="#!">Available Services</a></li>
-                <li><a class="footer-link" href="#!">Latest Posts</a></li>
+                <li><a class="footer-link" href="#!">Chúng tôi là ai</a></li>
+                <!-- <li><a class="footer-link" href="#!">Available Services</a></li>
+                <li><a class="footer-link" href="#!">Latest Posts</a></li> -->
                 <li><a class="footer-link" href="#!">FAQs</a></li>
               </ul>
             </div>
             <div class="col-md-4">
-              <h6 class="text-uppercase mb-3">Social media</h6>
+              <h6 class="text-uppercase mb-3">Mạng xã hội</h6>
               <ul class="list-unstyled mb-0">
                 <li><a class="footer-link" href="#!">Twitter</a></li>
                 <li><a class="footer-link" href="#!">Instagram</a></li>
-                <li><a class="footer-link" href="#!">Tumblr</a></li>
-                <li><a class="footer-link" href="#!">Pinterest</a></li>
+                <li><a class="footer-link" href="#!">Facebook</a></li>
+                <!-- <li><a class="footer-link" href="#!">Pinterest</a></li> -->
               </ul>
             </div>
           </div>
           <div class="border-top pt-4" style="border-color: #1d1d1d !important">
             <div class="row">
               <div class="col-md-6 text-center text-md-start">
-                <p class="small text-muted mb-0">&copy; 2021 All rights reserved.</p>
+                <p class="small text-muted mb-0">&copy; 2023.</p>
               </div>
               <div class="col-md-6 text-center text-md-end">
-                <p class="small text-muted mb-0">Template designed by <a class="text-white reset-anchor" href="https://bootstrapious.com/p/boutique-bootstrap-e-commerce-template">Bootstrapious</a></p>
+                <p class="small text-muted mb-0">Template designed by <a class="text-white reset-anchor" href="buihoangviet363@gmail.com">VBH</a></p>
                 <!-- If you want to remove the backlink, please purchase the Attribution-Free License. See details in readme.txt or license.txt. Thanks!-->
               </div>
             </div>
           </div>
         </div>
       </footer>
+      <!-- PopUp -->
+      <!-- Cart -->
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offCanvasCart" aria-labelledby="offcanvasCartLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasCartLabel">Giỏ hàng</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div>
+            Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+          </div>
+          <div class="dropdown mt-3">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+              Dropdown button
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Login -->
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offCanvasLogin" aria-labelledby="offcanvasLoginLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasLoginLabel"></h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="container">
+            <div class="row">
+              <div class="card mt-3 mb-2">
+                <div class="card-title">
+                  <h2 class="fs-4 text-center mt-3">Đăng nhập</h2>
+                  <hr>
+                </div>
+                <div class="card-body">
+                  <form>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Tài khoản email</label>
+                      <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Mật khẩu</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1" checked>
+                      <label class="form-check-label" for="exampleCheck1">Lưu đăng nhập</label>
+                    </div>
+                    <div class=" d-flex justify-content-center ">
+                      <button type="submit" class="btn btn-primary w-50">Đăng nhập</button>
+                    </div>
+                  </form>
+                </div>
+                <div class="card-title">
+                  <div class="ms-3 mt-1 mb-1">
+                    <strong>
+                      Chưa có tài khoản? Đăng kí
+                    </strong>
+                    <a href="#offCanvasSign" data-bs-toggle="offcanvas" role="button" aria-controls="offcanvasSign"> tại đây</a>
+                  </div>
+                  <div class="ms-3 mb-1">
+                    <strong>
+                      Quên mật khẩu?Khôi phục
+                    </strong>
+                    <a href="#!"> tại đây</a>
+                  </div>
+                  <hr>
+                  <!-- Login by social media -->
+                  <div class="social-btn">
+                    <button type="button"><i class="fab fa-facebook-f"></i></button>
+                    <button type="button"><i class="fab fa-twitter"></i></button>
+                    <button type="button"><i class="fab fa-pinterest-p"></i></button>
+                    <button type="button"><i class="fab fa-instagram"></i></button>
+                  </div>
+                  <style>
+                    .social-btn {
+                      display: flex;
+                      margin: 10px 0px;
+                      padding: 15px 0px;
+                      background-color: #e1bd65;
+                  }
+                  .social-btn button {
+                      width: 100%;
+                      cursor: pointer;
+                      border: none;
+                      background-color: transparent;
+                      font-size: 22px;
+                      color: #fff;
+                  }
+                  </style>
+                </div>
+               
+              </div>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+      <!-- Sign-in -->
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offCanvasSign" aria-labelledby="offcanvasSignLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasSignLabel"></h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="container">
+            <div class="row ">
+              <div class="card mt-3 mb-2">
+                <div class="card-title">
+                  <h2 class="fs-4 text-center mt-3 ">Đăng kí</h2>
+                  <hr>
+                </div>
+                <div class="card-body">
+                  <form>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Tên người dùng</label>
+                      <input type="email" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Tài khoản email</label>
+                      <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Mật khẩu</label>
+                      <input type="password" class="form-control" name="pass" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword2" class="form-label">Xác nhận mật khẩu</label>
+                      <input type="password" class="form-control" name="passCf" id="exampleInputPassword2">
+                    </div>
+                    <div class=" d-flex justify-content-center">
+                      <button type="submit" class="btn btn-primary w-100">Đăng kí</button>
+                    </div>
+                  </form>
+                </div>
+                <div class="card-title">
+                  <div class="ms-3 mt-1 mb-1">
+                    <strong>
+                      Đã có tài khoản? Đăng nhập
+                    </strong>
+                    <a href="#offCanvasLogin" data-bs-toggle="offcanvas" role="button" aria-controls="offcanvasLogin"> tại đây</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+      <!-- Favorite -->
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offCanvasLike" aria-labelledby="offcanvasLikeLabel">
+        <div class="offcanvas-header">
+          <h2 class="offcanvas-title" id="offcanvasLikeLabel">Sản phẩm yêu thích</h2>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div>
+            Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+          </div>
+          <div class="dropdown mt-3">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+              Dropdown button
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
       <!-- JavaScript files-->
       <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
       <script src="vendor/glightbox/js/glightbox.min.js"></script>
@@ -384,6 +566,7 @@
       <script src="vendor/swiper/swiper-bundle.min.js"></script>
       <script src="vendor/choices.js/public/assets/scripts/choices.min.js"></script>
       <script src="js/front.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
       <script src="./angular/main.js"></script>
       <script>
         // ------------------------------------------------------- //
